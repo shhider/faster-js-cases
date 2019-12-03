@@ -3,5 +3,6 @@
     "target": "ES6",
     "module": "commonjs"
   },
+  "lib": ["es2017"],
   "exclude": ["node_modules", "**/node_modules/*"]
 }

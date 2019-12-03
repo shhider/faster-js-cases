@@ -10,6 +10,9 @@ for (let i = 0; i < 1000; i++) {
 
 const again = () => {
   const objCache = {};
+  const setCache = new Set();
+  let temp;
+
   run1wTimes("cache by Object - add item", () => {
     for (let i = 0; i < dataToCache.length; i++) {
       const data = dataToCache[i];
@@ -17,7 +20,6 @@ const again = () => {
     }
   });
 
-  const setCache = new Set();
   run1wTimes("cache by Set - add item", () => {
     for (let i = 0; i < dataToCache.length; i++) {
       const data = dataToCache[i];
@@ -25,33 +27,12 @@ const again = () => {
     }
   });
 
-  // const mapCache = new Map();
-  // run1wTimes("cache by Map - add item", () => {
-  // for (let i = 0; i < dataToCache.length; i++) {
-  //   const data = dataToCache[i];
-  //   mapCache.set(data.id, data);
-  // }
+  // run1wTimes("cache by Object - values", () => {
+  //   temp = Object.keys(objCache).map(key => objCache[key]);
   // });
 
-  // let temp;
-  // run1wTimes("cache by Object - forEach", () => {
-  //   for (const key in objCache) {
-  //     if (objCache.hasOwnProperty(key)) {
-  //       temp = objCache[key];
-  //     }
-  //   }
-  // });
-
-  // run1wTimes("cache by Set - forEach", () => {
-  //   setCache.forEach(item => {
-  //     temp = item;
-  //   });
-  // });
-
-  // run1wTimes("cache by Map - forEach", () => {
-  //   mapCache.forEach(item => {
-  //     temp = item;
-  //   });
+  // run1wTimes("cache by Set - values", () => {
+  //   temp = setCache.values();
   // });
 
   // run1wTimes("cache by Object - delete item", () => {
