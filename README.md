@@ -8,6 +8,13 @@
 -   🚫 `Object.entries`
 -   [测试代码](./object-entries-vs-keys/index.js)
 
+### 实例化对象
+
+-   ✅ `const data = JSON.parse('{ "foo": 123, "bar": 456, ... }')`
+-   🚫 `const data = { foo: 123, bar: 456, ... }`
+-   tool: `babel-plugin-object-to-json-parse`
+-   reference: https://youtu.be/ff4fgQxPaO0
+
 ## 页面数据缓存
 
 ### 数据去重缓存
